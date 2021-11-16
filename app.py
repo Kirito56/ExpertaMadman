@@ -4,7 +4,10 @@ from DefFact import DefFact
 
 def run():
     """
-    Main Func
+    Main Func\n
+    Recommended add to::
+
+        RUN.ipynb
     :return:
     """
     pass
