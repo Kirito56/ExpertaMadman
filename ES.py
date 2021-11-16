@@ -14,8 +14,8 @@ class VideoCard(Fact):
                     (slot Price))
     """
     Start = Field(bool, mandatory=True)
-    Functions = Field(str, mandatory=True)
-    Connector = Field(str, mandatory=True)
+    Functions = Field(list, mandatory=True)
+    Connector = Field(list, mandatory=True)
     TheAmountOfMemory = Field(int, mandatory=True)
     Appointment = Field(str, mandatory=True)
     Selector = Field(str, mandatory=True)
