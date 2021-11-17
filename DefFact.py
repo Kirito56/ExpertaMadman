@@ -145,13 +145,16 @@ class DefFact(KnowledgeEngine):
         yield graphic_card(name='missing')
 
         @Rule(graphic_card(purpose='gaming'))
-        def FindGamingCard(self):
-            """
-            Rule where found card for gaming
-            Ты должен иницализировать Факты а потом создавать правила
+        def findGamingCard(self):
+            return print('Found')
 
-            :return: Found
-            :rtype: str
-            """
 
-        return print('Found')
+        @Rule(graphic_card(inputs=MATCH.inputs))
+        def findHDMI(self, inputs):
+            if 'HDMI' in inputs:
+                return print('Found card with HDMI input')
+
+        @Rule(graphic_card(price=MATCH.price), TEST(lambda name, price: price<10000))
+        def findByPrice(self, name, price):
+            return print(name, price)
+        
