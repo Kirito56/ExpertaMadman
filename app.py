@@ -1,4 +1,4 @@
-from ES import VideoCard
+from ES import graphic_card
 from DefFact import DefFact
 
 

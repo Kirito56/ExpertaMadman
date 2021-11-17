@@ -2,7 +2,7 @@ from experta.engine import KnowledgeEngine
 from experta.rule import Rule
 from experta.deffacts import DefFacts
 
-from ES import VideoCard
+from ES import graphic_card
 
 
 class DefFact(KnowledgeEngine):
@@ -84,17 +84,17 @@ class DefFact(KnowledgeEngine):
 
         :return:
         """
-        yield VideoCard(Name='',
-                        Functions=[],
-                        Connector=[],
-                        TheAmountOfMemory=0,
-                        Appointment='',
-                        Selector='',
-                        Price=0)  # Fact 1
-        yield VideoCard()  # Fact 2
-        yield VideoCard()  # Fact 3
+        yield graphic_card(Name='',
+                           Functions=[],
+                           Connector=[],
+                           TheAmountOfMemory=0,
+                           Appointment='',
+                           Selector='',
+                           Price=0)  # Fact 1
+        yield graphic_card()  # Fact 2
+        yield graphic_card()  # Fact 3
 
-        @Rule(VideoCard(purpose='gaming'))
+        @Rule(graphic_card(purpose='gaming'))
         def FindGamingCard(self):
             """
             Rule where found card for gaming
