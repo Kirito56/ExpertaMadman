@@ -148,6 +148,7 @@ class DefFact(KnowledgeEngine):
         def findGamingCard(self):
             return print('Found')
 
+
         @Rule(graphic_card(inputs=MATCH.inputs))
         def findHDMI(self, inputs):
             if 'HDMI' in inputs:
