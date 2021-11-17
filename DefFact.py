@@ -144,7 +144,7 @@ class DefFact(KnowledgeEngine):
 
         yield graphic_card(name='missing')
 
-        @Rule(VideoCard(purpose='gaming'))
+        @Rule(graphic_card(purpose='gaming'))
         def FindGamingCard(self):
             """
             Rule where found card for gaming
