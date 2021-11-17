@@ -84,24 +84,28 @@ class DefFact(KnowledgeEngine):
 
         :return:
         """
-        yield graphic_card(Name='',
-                           Functions=[],
-                           Connector=[],
-                           TheAmountOfMemory=0,
-                           Appointment='',
-                           Selector='',
-                           Price=0)  # Fact 1
-        yield graphic_card()  # Fact 2
+        yield graphic_card(name='MSI_PCI-Ex_GeForce_GT_730',
+                           functions=['DirectX_12', 'OpenGL_4.4'],
+                           inputs=['DVI', 'VGA', 'HDMI'],
+                           memory=2,
+                           purpose='office',
+                           price=3000,
+                           producer='nVidia')  # Fact 1
+        yield graphic_card(name='Gigabyte_PCI-Ex_GeForce_GT_710',
+                           functions=['DirectX_12', 'OpenGL_4.5'],
+                           inputs=['DVI', 'VGA', 'HDMI'],
+                           memory=2,
+                           purpose='pro',
+                           price=5000,
+                           producer='nVidia')  # Fact 2
         yield graphic_card()  # Fact 3
 
         @Rule(graphic_card(purpose='gaming'))
         def FindGamingCard(self):
             """
             Rule where found card for gaming
-            Ты должен иницализировать Факты а потом создавать правила
 
             :return: Found
             :rtype: str
             """
-
-        return print('Found')
+            return print('Found')
