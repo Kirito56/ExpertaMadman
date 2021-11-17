@@ -1,11 +1,12 @@
 from experta.fact import Fact, Field
 
-class VideoCard(Fact):
+
+class graphic_card(Fact):
     """
     CLIPS::
 
-        (deftemplate VideoCard
-                    (slot Start)
+        (deftemplate graphic_card
+                    (slot Name)
                     (multislot Functions)
                     (multislot Connector)
                     (slot TheAmountOfMemory)
@@ -13,10 +14,10 @@ class VideoCard(Fact):
                     (slot Selector)
                     (slot Price))
     """
-    Start = Field(bool, mandatory=True)
-    Functions = Field(list, mandatory=True)
-    Connector = Field(list, mandatory=True)
-    TheAmountOfMemory = Field(int, mandatory=True)
-    Appointment = Field(str, mandatory=True)
-    Selector = Field(str, mandatory=True)
-    Price = Field(str, mandatory=True)
+    name = Field(bool, mandatory=True)
+    functions = Field(list, mandatory=True)
+    inputs = Field(list, mandatory=True)
+    memory = Field(int, mandatory=True)
+    purpose = Field(str, mandatory=True)
+    price = Field(int, mandatory=True)
+    producer = Field(str, mandatory=True)
