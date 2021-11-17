@@ -83,8 +83,11 @@ class DefFact(KnowledgeEngine):
 
         :return:
         """
+        yield VideoCard()# Fact 1
+        yield VideoCard()# Fact 2
+        yield VideoCard()# Fact 3
 
-        @Rule(graphic_card(purpose='gaming'))
+        @Rule(VideoCard(purpose='gaming'))
         def FindGamingCard(self):
             """
             Rule where found card for gaming
@@ -94,5 +97,3 @@ class DefFact(KnowledgeEngine):
             :rtype: str
             """
         return print('Found')
-
-        yield VideoCard(Start=True, Functions='DirectX', )
