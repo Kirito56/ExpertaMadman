@@ -100,12 +100,12 @@ class DefFact(KnowledgeEngine):
                            producer='nVidia')  # Fact 2
         yield graphic_card()  # Fact 3
 
-        @Rule(graphic_card(purpose='gaming'))
-        def FindGamingCard(self):
-            """
-            Rule where found card for gaming
+    @Rule(graphic_card(purpose='gaming'))
+    def FindGamingCard(self):
+        """
+        Rule where found card for gaming
 
-            :return: Found
-            :rtype: str
-            """
-            return print('Found')
+        :return: Found
+        :rtype: str
+        """
+        return print('Found')
