@@ -5,7 +5,7 @@ class VideoCard(Fact):
     CLIPS::
 
         (deftemplate VideoCard
-                    (slot Start)
+                    (slot Name)
                     (multislot Functions)
                     (multislot Connector)
                     (slot TheAmountOfMemory)
@@ -13,7 +13,7 @@ class VideoCard(Fact):
                     (slot Selector)
                     (slot Price))
     """
-    Start = Field(bool, mandatory=True)
+    Name = Field(bool, mandatory=True)
     Functions = Field(list, mandatory=True)
     Connector = Field(list, mandatory=True)
     TheAmountOfMemory = Field(int, mandatory=True)
