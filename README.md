@@ -7,8 +7,8 @@
 
 CLIPS:
 
-    (deftemplate VideoCard
-                    (slot Start)
+    (deftemplate graphic_card
+                    (slot Name)
                     (multislot Functions)
                     (multislot Connector)
                     (slot TheAmountOfMemory)
