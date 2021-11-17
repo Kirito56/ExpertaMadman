@@ -88,6 +88,7 @@ class DefFact(KnowledgeEngine):
         def FindGamingCard(self):
             """
             Rule where found card for gaming
+            Ты должен иницализировать Факты а потом создавать правила
 
             :return: Found
             :rtype: str
