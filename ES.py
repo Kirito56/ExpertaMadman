@@ -14,7 +14,7 @@ class graphic_card(Fact):
                     (slot Selector)
                     (slot Price))
     """
-    name = Field(bool, mandatory=True)
+    name = Field(str, mandatory=True)
     functions = Field(list, mandatory=True)
     inputs = Field(list, mandatory=True)
     memory = Field(int, mandatory=True)
