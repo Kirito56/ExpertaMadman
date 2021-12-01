@@ -1,4 +1,6 @@
+from experta import rule
 from experta.engine import KnowledgeEngine
+from experta.fieldconstraint import L
 from experta.rule import Rule
 from experta.deffacts import DefFacts
 from experta.shortcuts import MATCH
@@ -165,3 +167,7 @@ class DefFact(KnowledgeEngine):
     def findByPrice(self, price):
         return print(price)
         
+    @Rule(graphic_card(purpose=~L('gaming'), inputs=MATCH.inputs))
+    def findFactWhereNotGamingCard(self, inputs):
+        if 'DVI' in inputs:
+            return print(f'Found card with DVI input')
