@@ -6,13 +6,13 @@ class graphic_card(Fact):
     CLIPS::
 
         (deftemplate graphic_card
-                    (slot Name)
-                    (multislot Functions)
-                    (multislot Connector)
-                    (slot TheAmountOfMemory)
-                    (slot Appointment)
-                    (slot Selector)
-                    (slot Price))
+                    (slot name)
+                    (multislot functions)
+                    (multislot inputs)
+                    (slot memory)
+                    (slot purpose)
+                    (slot producer)
+                    (slot price))
     """
     name = Field(str, mandatory=True)
     functions = Field(list, mandatory=True)
